@@ -90,8 +90,8 @@ export const Col = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
+    width: 80%;
+    height: 80%;
     border-radius: 50%;
     background: ${props => getChessColor(props.status)};
   }

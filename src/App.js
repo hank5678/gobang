@@ -41,6 +41,12 @@ function App() {
     [playerId, gameover]
   )
 
+  const resetGame = useCallback(() => {
+    setGrid(DEFAULT_GRID)
+    setWinner()
+    setPlayerId(1)
+  }, [])
+
   useEffect(() => {
     // 贏法1: 橫向5個
     for (let x = 0; x < grid.length; x++) {
@@ -115,7 +121,12 @@ function App() {
     <div>
       <p>現在輪到：玩家{playerId}</p>
       <ChessBoard grid={grid} playerAction={playerAction} gameover={gameover} />
-      {gameover && <p>遊戲結束，玩家{winner}獲勝</p>}
+      {gameover && (
+        <>
+          <p>遊戲結束，玩家{winner}獲勝</p>
+          <button onClick={resetGame}>重新開始</button>
+        </>
+      )}
     </div>
   )
 }
