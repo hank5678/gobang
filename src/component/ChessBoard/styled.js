@@ -5,9 +5,9 @@ const getChessColor = status => {
     case 0:
       return "transparent"
     case 1:
-      return "#000000"
+      return "radial-gradient(circle at 70% 30%, #999 0%, #111 50%)"
     case 2:
-      return "#FFFFFF"
+      return "radial-gradient(circle at 70% 30%, #FFF 0%,#DDD 50%)"
     default:
       return "transparent"
   }
@@ -76,7 +76,6 @@ export const Col = styled.div`
   position: relative;
   flex: 1;
   box-sizing: border-box;
-  /* outline: 1px solid #333333; */
   &::before {
     content: "";
     display: block;
