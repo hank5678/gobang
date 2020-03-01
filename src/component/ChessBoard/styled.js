@@ -1,13 +1,14 @@
 import styled from "styled-components"
+import wood from "./wood.png"
 
 const getChessColor = status => {
   switch (status) {
     case 0:
       return "transparent"
     case 1:
-      return "radial-gradient(circle at 70% 30%, #999 0%, #111 50%)"
+      return "radial-gradient(circle at 70% 30%, #999 0%, #111 60%)"
     case 2:
-      return "radial-gradient(circle at 70% 30%, #FFF 0%,#DDD 50%)"
+      return "radial-gradient(circle at 70% 30%, #FFF 0%,#CCC 60%)"
     default:
       return "transparent"
   }
@@ -17,6 +18,9 @@ export const Container = styled.div`
   position: relative;
   max-width: 600px;
   background: #e7be83;
+  background-image: url(${wood});
+  background-repeat: repeat;
+  background-size: 100% auto;
   border-radius: 8px;
 `
 
